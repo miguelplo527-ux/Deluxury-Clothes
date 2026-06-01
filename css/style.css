@@ -7,20 +7,33 @@
 body{
     font-family:Arial, sans-serif;
 }
-
-.banner{
-    height:500px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    background:#f5f5f5;
+.logo-nav{
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+    border-radius: 50%;
 }
 
+.banner{
+    height: 100vh; /* ocupa toda la pantalla */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #f5f5f5;
+}
+
+
 .banner h1{
-    font-size:50px;
+    font-size: 3rem;
+}
+.banner p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .contenedor-productos{
@@ -55,6 +68,13 @@ footer{
 
 .logo-login{
     width: 120px;
+    margin-bottom: 20px;
+    display: flex;
+    direction: left;
+}
+.logo-principal{
+    width: 400px;
+    max-width: 90%;
     margin-bottom: 20px;
 }
 
