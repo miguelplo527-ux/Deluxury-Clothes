@@ -63,6 +63,20 @@
 
     </div>
 </nav>
+<div class="container mt-3">
+
+    <div class="alert alert-dark">
+
+        Bienvenido:
+        <strong id="usuario"></strong>
+
+        |
+        Rol:
+        <strong id="rolUsuario"></strong>
+
+    </div>
+
+</div>
 
 <section class="banner">
 
@@ -79,12 +93,38 @@
 </section>
 
 <section class="container py-5">
-    <h2>Sobre Nosotros</h2>
-    <p>
-        Deluxury Clothes es una empresa dedicada a la venta de ropa moderna,
-        permitiendo gestionar productos, ventas, inventario y PQRS mediante una
-        plataforma web.
-    </p>
+    <h2 class="mb-4">Sobre Nosotros</h2>
+
+<div class="row">
+
+<div class="col-md-4 mb-3">
+<div class="card text-center">
+<div class="card-body">
+<h3>50</h3>
+<p>Productos</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 mb-3">
+<div class="card text-center">
+<div class="card-body">
+<h3>20</h3>
+<p>Ventas</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 mb-3">
+<div class="card text-center">
+<div class="card-body">
+<h3>15</h3>
+<p>Usuarios</p>
+</div>
+</div>
+</div>
+
+</div>
 </section>
 
 <footer>
@@ -92,6 +132,14 @@
 </footer>
 
 
+<script>
 
+document.getElementById("usuario").innerHTML =
+localStorage.getItem("nombre");
+
+document.getElementById("rolUsuario").innerHTML =
+localStorage.getItem("rol");
+
+</script>
 </body>
 </html>

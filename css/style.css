@@ -98,3 +98,23 @@ footer{
     }
 
 }
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.logo-principal{
+    width:200px;
+}
+
+@media(max-width:768px){
+
+    .logo-principal{
+        width:120px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+}

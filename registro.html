@@ -25,19 +25,23 @@
     <option value="Cliente">Cliente</option>
 </select>
         <input type="text"
-               class="form-control mb-3"
-               placeholder="Nombre">
+            id="nombre"
+            class="form-control mb-3"
+            placeholder="Nombre">
 
-        <input type="email"
-               class="form-control mb-3"
-               placeholder="Correo">
+            <input type="email"
+            id="correo"
+            class="form-control mb-3"
+            placeholder="Correo">
 
-        <input type="password"
-               class="form-control mb-3"
-               placeholder="Contraseña">
+            <input type="password"
+            id="password"
+            class="form-control mb-3"
+            placeholder="Contraseña">
 
-        <button class="btn btn-success w-100">
-           <a href="index.html">Registrarse</a> 
+        <button class="btn btn-success w-100"
+            onclick="registrar()">
+            Registrarse
         </button>
 
         <br><br>
@@ -50,5 +54,6 @@
 
 </div>
 
+<script src="./java.js"></script>
 </body>
 </html>
