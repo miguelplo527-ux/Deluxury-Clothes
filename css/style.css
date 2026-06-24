@@ -118,3 +118,110 @@ img{
     }
 
 }
+
+body {
+    background-color: #fcfcfc;
+}
+
+
+.vista-admin {
+    display: none !important;
+}
+
+
+.hero-luxury {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.img-galeria {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-producto {
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+
+.contenedor-img {
+    overflow: hidden;
+    height: 360px;
+    border-radius: 12px 12px 0 0;
+}
+
+
+.img-producto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.card-producto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+.card-producto:hover .img-producto {
+    transform: scale(1.06); 
+}
+
+
+.precio-dorado {
+    color: #b38600;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.titulo-producto {
+    font-weight: 600;
+    color: #212529;
+    letter-spacing: -0.3px;
+}
+
+.titulo-principal {
+    letter-spacing: -1px;
+}
+
+
+
+.table thead th {
+    background-color: #212529;
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    border: none;
+}
+
+
+.table-hover tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(179, 134, 0, 0.03); 
+}
+
+
+.fs-7 {
+    font-size: 0.75rem !important;
+}
+
+.card-tabla {
+    overflow: hidden; 
+}

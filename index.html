@@ -3,143 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deluxury Clothes</title>
-
+    <title>Deluxury Clothes | Tienda Oficial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/a0994db117.js" crossorigin="anonymous"></script>
+    <style>
+        .hero-luxury {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .img-galeria {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .vista-admin {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-
-    <img src="./img/1000120932.jpg"
-         alt="Logo Deluxury"
-         class="logo-nav">
-
-    <span>Deluxury Clothes</span>
-
-</a>
-
+        <a class="navbar-brand fw-bold" href="index.html">DELUXURY CLOTHES</a>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-   
-                <a class="nav-link" href="login.html">
-                    Iniciar Sesión
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="registro.html">
-                    Registrarse
-                </a>
-            </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="productos.html">Productos</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="inventario.html">Inventario</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="ventas.html">Ventas</a>
-                </li>
-
+            <ul class="navbar-nav ms-auto" id="menu-navegacion">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                
+                <li class="nav-item vista-admin"><a class="nav-link text-warning" href="inventario.html">Inventario</a></li>
+                <li class="nav-item vista-admin"><a class="nav-link text-warning" href="ventas.html">Ventas</a></li>
+                <li class="nav-item vista-admin"><a class="nav-link text-info" href="./dashboard.html">Panel Admin</a></li>
+                
+                <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-sm" href="./login.html">Iniciar Sesión</a></li>
             </ul>
         </div>
-
     </div>
 </nav>
-<div class="container mt-3">
 
-    <div class="alert alert-dark">
-
-        Bienvenido:
-        <strong id="usuario"></strong>
-
-        |
-        Rol:
-        <strong id="rolUsuario"></strong>
-
+<section class="hero-luxury">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Nueva Colección Premium</h1>
+        <p class="lead">Diseños exclusivos de alta costura urbana.</p>
+        <a href="./productos.html" class="btn btn-outline-light">Ver Catálogo</a>
     </div>
-
-</div>
-
-<section class="banner">
-
-    <img src="./img/1000120932.jpg" alt="Logo Deluxury Clothes" class="logo-principal">
-
-    <h1>Deluxury Clothes</h1>
-
-    <p>Moda exclusiva al alcance de todos</p>
-
-    <a href="productos.html" class="btn btn-dark">
-        Ver Productos
-    </a>
-
 </section>
 
 <section class="container py-5">
-    <h2 class="mb-4">Sobre Nosotros</h2>
-
-<div class="row">
-
-<div class="col-md-4 mb-3">
-<div class="card text-center">
-<div class="card-body">
-<h3>50</h3>
-<p>Productos</p>
-</div>
-</div>
-</div>
-
-<div class="col-md-4 mb-3">
-<div class="card text-center">
-<div class="card-body">
-<h3>20</h3>
-<p>Ventas</p>
-</div>
-</div>
-</div>
-
-<div class="col-md-4 mb-3">
-<div class="card text-center">
-<div class="card-body">
-<h3>15</h3>
-<p>Usuarios</p>
-</div>
-</div>
-</div>
-
-</div>
+    <h2 class="text-center fw-bold mb-4">Nuestras Prendas</h2>
+    <div class="row g-4">
+        <div class="col-md-4 text-center">
+            <img src="./img/Camiseta.jpeg" class="img-galeria mb-2" alt="Formal">
+            <h5>Línea Formal</h5>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="./img/PlayBoy.jpeg" class="img-galeria mb-2" alt="Casual">
+            <h5>Casual Premium</h5>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="./img/Bolsos.webp" class="img-galeria mb-2" alt="Accesorios">
+            <h5>Accesorios</h5>
+        </div>
+    </div>
 </section>
 
-<footer>
-    <p>© 2026 Deluxury Clothes</p>
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <img src="./img/Otoño.jpeg" class="img-fluid rounded" alt="Pasarela">
+            </div>
+            <div class="col-md-6">
+                <span class="badge bg-dark mb-2">Evento</span>
+                <h3 class="fw-bold">Pasarela Otoño - Invierno</h3>
+                <p class="text-muted">Revive la presentación oficial de nuestra colección ejecutiva, destacando las tendencias de alta costura de esta temporada.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="p-4 bg-dark text-white rounded h-100 d-flex flex-column justify-content-center">
+                <h4 class="fw-bold mb-3">Visítanos</h4>
+                <p><i class="fa-solid fa-location-dot me-2 text-warning"></i> San Andresito 8a16 Cra 20 </p>
+                <p><i class="fa-solid fa-clock me-2 text-warning"></i> Lunes a Viernes: 9:00 AM - 6:00 PM -- Sabados: 9:00 AM - 2:00 PM</p>
+                <p><i class="fa-solid fa-phone me-2 text-warning"></i> +57 300 0000000</p>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="rounded overflow-hidden shadow-sm h-100" style="min-height: 300px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7953.8849121686935!2d-74.09746938246575!3d4.604326681412226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99129b78dac7%3A0x21048357349a5e8!2sSan%20Andresito%20San%20Jose!5e0!3m2!1ses-419!2sco!4v1782337306519!5m2!1ses-419!2sco" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; min-height: 300px; display: block;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0 small">© 2026 Deluxury Clothes. Todos los derechos reservados.</p>
 </footer>
 
-
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        let rolLogueado = localStorage.getItem("rol") || "Cliente";
 
-document.getElementById("usuario").innerHTML =
-localStorage.getItem("nombre");
+        
+        if (rolLogueado === "Administrador" || rolLogueado === "Vendedor") {
+            let enlacesAdmin = document.querySelectorAll(".vista-admin");
+            enlacesAdmin.forEach(el => el.style.setProperty('display', 'block', 'important'));
+        }
 
-document.getElementById("rolUsuario").innerHTML =
-localStorage.getItem("rol");
-
+        let nombreLogueado = localStorage.getItem("nombre");
+        if (nombreLogueado) {
+        
+            document.getElementById("menu-navegacion").innerHTML += `
+                <li class="nav-item ms-lg-2">
+                    <button onclick="localStorage.clear(); location.reload();" class="btn btn-danger btn-sm">Salir (${nombreLogueado})</button>
+                </li>
+            `;
+        }
+    });
 </script>
 </body>
 </html>
