@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deluxury Clothes | Tienda Oficial</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a0994db117.js" crossorigin="anonymous"></script>
     <style>
         .hero-luxury {
@@ -22,9 +22,9 @@
             object-fit: cover;
             border-radius: 8px;
         }
-        
-        .vista-admin {
-            display: none !important;
+        .precio-dorado {
+            color: #d4af37;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -33,88 +33,76 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold" href="index.html">DELUXURY CLOTHES</a>
-        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto" id="menu-navegacion">
-                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-                
-                <li class="nav-item vista-admin"><a class="nav-link text-warning" href="inventario.html">Inventario</a></li>
-                <li class="nav-item vista-admin"><a class="nav-link text-warning" href="ventas.html">Ventas</a></li>
-                <li class="nav-item vista-admin"><a class="nav-link text-info" href="./dashboard.html">Panel Admin</a></li>
-                
-                <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-sm" href="./login.html">Iniciar Sesión</a></li>
-            </ul>
+            <ul class="navbar-nav ms-auto" id="menu-navegacion"></ul>
         </div>
     </div>
 </nav>
 
-<section class="hero-luxury">
+<header class="hero-luxury">
     <div class="container">
-        <h1 class="display-4 fw-bold">Nueva Colección Premium</h1>
-        <p class="lead">Diseños exclusivos de alta costura urbana.</p>
-        <a href="./productos.html" class="btn btn-outline-light">Ver Catálogo</a>
+        <h1 class="display-3 fw-bold m-0 text-uppercase tracking-wide">Deluxury Clothes</h1>
+        <p class="lead mt-2 text-white-50 fs-4">Exclusividad, Elegancia y Estilo Premium Urbano</p>
+        <a href="productos.html" class="btn btn-outline-light btn-lg mt-4 px-4 py-2 fw-semibold text-uppercase">Ver Catálogo</a>
     </div>
-</section>
+</header>
 
 <section class="container py-5">
-    <h2 class="text-center fw-bold mb-4">Nuestras Prendas</h2>
-    <div class="row g-4">
-        <div class="col-md-4 text-center">
-            <img src="./img/Camiseta.jpeg" class="img-galeria mb-2" alt="Formal">
-            <h5>Línea Formal</h5>
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-uppercase">Colección Destacada</h2>
+        <div class="mx-auto bg-dark" style="height: 3px; width: 60px;"></div>
+    </div>
+    <div class="row g-4 text-center">
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=500&q=80" class="img-galeria mb-3 shadow-sm" alt="Oversize">
+            <h5 class="fw-bold">Hoddies Oversize</h5>
+            <p class="text-muted small">Algodón pesado premium para el día a día.</p>
         </div>
-        <div class="col-md-4 text-center">
-            <img src="./img/PlayBoy.jpeg" class="img-galeria mb-2" alt="Casual">
-            <h5>Casual Premium</h5>
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" class="img-galeria mb-3 shadow-sm" alt="Calzado">
+            <h5 class="fw-bold">Calzado de Lujo</h5>
+            <p class="text-muted small">Sneakers exclusivos de edición limitada.</p>
         </div>
-        <div class="col-md-4 text-center">
-            <img src="./img/Bolsos.webp" class="img-galeria mb-2" alt="Accesorios">
-            <h5>Accesorios</h5>
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1509319117193-57bab727e09d?auto=format&fit=crop&w=500&q=80" class="img-galeria mb-3 shadow-sm" alt="Accesorios">
+            <h5 class="fw-bold">Accesorios Urbanos</h5>
+            <p class="text-muted small">Gorras, cadenas y complementos esenciales.</p>
         </div>
     </div>
 </section>
 
 <section class="bg-light py-5">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 mb-3 mb-md-0">
-                <img src="./img/Otoño.jpeg" class="img-fluid rounded" alt="Pasarela">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <h3 class="fw-bold text-uppercase mb-3">Visita Nuestra Tienda Física</h3>
+                <p class="text-secondary mb-4">Disfruta de una atención completamente personalizada y conoce de primera mano los materiales de confección premium de nuestras prendas.</p>
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-location-dot fs-4 text-dark me-3"></i>
+                    <div>
+                        <h6 class="m-0 fw-bold">Ubicación Primaria</h6>
+                        <small class="text-muted">San Andresito, Bogotá Colombia</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-clock fs-4 text-dark me-3"></i>
+                    <div>
+                        <h6 class="m-0 fw-bold">Horario de Atención</h6>
+                        <small class="text-muted">Lunes a Sábado: 9:00 AM - 7:00 PM</small>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <span class="badge bg-dark mb-2">Evento</span>
-                <h3 class="fw-bold">Pasarela Otoño - Invierno</h3>
-                <p class="text-muted">Revive la presentación oficial de nuestra colección ejecutiva, destacando las tendencias de alta costura de esta temporada.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="container py-5">
-    <div class="row g-4">
-        <div class="col-md-6">
-            <div class="p-4 bg-dark text-white rounded h-100 d-flex flex-column justify-content-center">
-                <h4 class="fw-bold mb-3">Visítanos</h4>
-                <p><i class="fa-solid fa-location-dot me-2 text-warning"></i> San Andresito 8a16 Cra 20 </p>
-                <p><i class="fa-solid fa-clock me-2 text-warning"></i> Lunes a Viernes: 9:00 AM - 6:00 PM -- Sabados: 9:00 AM - 2:00 PM</p>
-                <p><i class="fa-solid fa-phone me-2 text-warning"></i> +57 300 0000000</p>
-            </div>
-        </div>
-        
-        <div class="col-md-6">
-            <div class="rounded overflow-hidden shadow-sm h-100" style="min-height: 300px;">
+            <div class="col-lg-6">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7953.8849121686935!2d-74.09746938246575!3d4.604326681412226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99129b78dac7%3A0x21048357349a5e8!2sSan%20Andresito%20San%20Jose!5e0!3m2!1ses-419!2sco!4v1782337306519!5m2!1ses-419!2sco" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.924127521874!2d-74.090000!3d4.606000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a100000001%3A0x0!2zNMKwMzYnMjEuNiJOIDc0wrAwNScyNC4wIlc!5e0!3m2!1ses!2sco!4v1719480000000!5m2!1ses!2sco" 
                     width="100%" 
-                    height="100%" 
-                    style="border:0; min-height: 300px; display: block;" 
+                    height="300" 
+                    style="border:0; border-radius: 8px; display: block;" 
                     allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="strict-origin-when-cross-origin">
+                    loading="lazy">
                 </iframe>
             </div>
         </div>
@@ -125,27 +113,56 @@
     <p class="mb-0 small">© 2026 Deluxury Clothes. Todos los derechos reservados.</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        
-        let rolLogueado = localStorage.getItem("rol") || "Cliente";
+        let rolLogueado = localStorage.getItem("rol") || sessionStorage.getItem("rol");
+        let nombreLogueado = localStorage.getItem("nombre") || sessionStorage.getItem("nombre");
+        let menu = document.getElementById("menu-navegacion");
 
-        
-        if (rolLogueado === "Administrador" || rolLogueado === "Vendedor") {
-            let enlacesAdmin = document.querySelectorAll(".vista-admin");
-            enlacesAdmin.forEach(el => el.style.setProperty('display', 'block', 'important'));
-        }
+        if (rolLogueado === "null" || rolLogueado === "undefined" || !rolLogueado) rolLogueado = null;
+        if (nombreLogueado === "null" || nombreLogueado === "undefined" || !nombreLogueado) nombreLogueado = null;
 
-        let nombreLogueado = localStorage.getItem("nombre");
-        if (nombreLogueado) {
-        
-            document.getElementById("menu-navegacion").innerHTML += `
-                <li class="nav-item ms-lg-2">
-                    <button onclick="localStorage.clear(); location.reload();" class="btn btn-danger btn-sm">Salir (${nombreLogueado})</button>
+        let htmlMenu = `
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+        `;
+
+        if (nombreLogueado && rolLogueado) {
+            if (rolLogueado === "Administrador" || rolLogueado === "Vendedor") {
+                htmlMenu += `
+                    <li class="nav-item"><a class="nav-link text-info fw-bold" href="dashboard.html"><i class="fa-solid fa-lock-open me-1"></i>Panel Admin</a></li>
+                `;
+            } else if (rolLogueado === "Cliente") {
+                htmlMenu += `
+                    <li class="nav-item"><a class="nav-link text-info fw-bold" href="dashboard-cliente.html"><i class="fa-solid fa-user me-1"></i>Panel Cliente</a></li>
+                `;
+            }
+            
+            htmlMenu += `
+                <li class="nav-item ms-lg-3">
+                    <button onclick="cerrarSesion()" class="btn btn-danger btn-sm w-100 mt-2 mt-lg-0">Salir (${nombreLogueado})</button>
+                </li>
+            `;
+        } else {
+            htmlMenu += `
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-outline-light btn-sm w-100 mt-2 mt-lg-0" href="login.html">Iniciar Sesión</a>
                 </li>
             `;
         }
+
+        if (menu) {
+            menu.innerHTML = htmlMenu;
+        }
     });
+
+    function cerrarSesion() {
+        localStorage.clear();
+        sessionStorage.clear();
+        window.location.href = 'index.html';
+    }
 </script>
 </body>
 </html>

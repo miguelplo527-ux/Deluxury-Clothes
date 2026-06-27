@@ -14,156 +14,331 @@
 <body>
 
 <div class="dashboard-layout">
+    
     <aside class="sidebar">
         <div class="sidebar-logo">
-            <img src="./img/1000120932.jpg" alt="Logo" style="max-width: 80px; border-radius: 50%;">
+            <img src="./img/1000120932.jpg" alt="Logo" class="profile-img">
             <h2>Deluxury</h2>
             <p>Panel Administrativo</p>
         </div>
         <nav class="sidebar-menu">
-            <a href="#" class="active"><i class="fa-solid fa-users"></i> Usuarios</a>
-            <a href="../productos.html"><i class="fa-solid fa-box"></i> Productos</a>
-            <a href="../inventario.html"><i class="fa-solid fa-warehouse"></i> Inventario</a>
-            <a href="../ventas.html"><i class="fa-solid fa-cart-shopping"></i> Ventas</a>
-            <a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Salir al Inicio</a>
+            <a class="menu-link active" data-target="sec-analitica"><i class="fa-solid fa-chart-line"></i> Estadísticas</a>
+            <a class="menu-link" data-target="sec-usuarios"><i class="fa-solid fa-users"></i> Gestión Usuarios</a>
+            <a class="menu-link" data-target="sec-inventario"><i class="fa-solid fa-boxes-stacked"></i> Inventario</a>
+            <a class="menu-link" data-target="sec-ventas"><i class="fa-solid fa-cart-shopping"></i> Registro Ventas</a>
+            
+            <a href="index.html" class="mt-auto text-danger menu-link"><i class="fa-solid fa-house"></i> Volver a la Tienda</a>
         </nav>
     </aside>
 
-    <main class="dashboard-main">
-        <header class="topbar">
+    <main class="main-content">
+        
+        <header class="top-navbar">
             <div>
-                <h1>Dashboard</h1>
-                <p>Bienvenido al panel de gestión de Deluxury Clothes.</p>
+                <h4 class="m-0 fw-bold text-uppercase text-secondary">Control General</h4>
+                <small class="text-muted">Gestión interna y analítica de Deluxury Clothes</small>
             </div>
-            <div class="admin-info">
-                <i class="fa-solid fa-circle-user"></i>
-                <span id="admin-name">Administrador</span>
+            <div class="user-profile">
+                <i class="fa-solid fa-user-shield fs-5 text-secondary"></i>
+                <span class="fw-semibold text-dark">Administrador</span>
             </div>
         </header>
 
-        <section class="row g-4 mb-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="card-resumen">
-                    <i class="fa-solid fa-users"></i>
-                    <div>
-                        <h3>15</h3>
-                        <p>Usuarios registrados</p>
-                    </div>
+        <div class="content-body">
+            
+            <section id="sec-analitica" class="tab-section active-tab">
+                <div class="mb-4">
+                    <h3 class="fw-bold m-0 text-dark">Rendimiento del Negocio</h3>
+                    <p class="text-muted small m-0">Monitoreo de ingresos y tendencias del inventario.</p>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card-resumen">
-                    <i class="fa-solid fa-box"></i>
-                    <div>
-                        <h3>50</h3>
-                        <p>Productos activos</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="card-resumen">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <div>
-                        <h3>20</h3>
-                        <p>Ventas totales</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="panel-tabla bg-white p-4 rounded shadow-sm">
-            <div class="cabecera-tabla d-flex justify-content-between align-items-center mb-3">
-                <div>
-                    <h2>Gestión de Personal</h2>
-                    <p>Administración de Roles y Accesos (CRUD)</p>
-                </div>
-                <button class="btn btn-maskot" data-bs-toggle="modal" data-bs-target="#modalUsuario">
-                    <i class="fa-solid fa-plus"></i> Nuevo Usuario
-                </button>
-            </div>
-
-            <div class="table-responsive">
-                <table id="tablaUsuario" class="table table-striped align-middle">
-                    <thead>
-                        <tr>
-                            <th>Identificación</th>
-                            <th>Nombre</th>
-                            <th>Correo</th>
-                            <th>Rol</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1001</td>
-                            <td>Brandon Colina</td>
-                            <td>Br@gmail.com</td>
-                            <td>Vendedor</td>
-                            <td>
-                                <button class="btn btn-sm btn-editar"><i class="fa-solid fa-pen"></i></button>
-                                <button class="btn btn-sm btn-eliminar"><i class="fa-solid fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1002</td>
-                            <td>Miguel Angel</td>
-                            <td>Agll@deluxury.com</td>
-                            <td>Administrador</td>
-                            <td>
-                                <button class="btn btn-sm btn-editar"><i class="fa-solid fa-pen"></i></button>
-                                <button class="btn btn-sm btn-eliminar"><i class="fa-solid fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1003</td>
-                            <td>Emanuel</td>
-                            <td>Satan@deluxury.com</td>
-                            <td>Administrador</td>
-                            <td>
-                                <button class="btn btn-sm btn-editar"><i class="fa-solid fa-pen"></i></button>
-                                <button class="btn btn-sm btn-eliminar"><i class="fa-solid fa-trash"></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <div class="modal fade" id="modalUsuario" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title w-100 text-center fw-bold">Nuevo Usuario Administrativo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card p-3 border-0 shadow-sm bg-white rounded-3 d-flex flex-row align-items-center gap-3">
+                            <div class="bg-success-subtle p-2 rounded-3 text-success"><i class="fa-solid fa-money-bill-wave fs-3"></i></div>
+                            <div>
+                                <h5 class="fw-bold m-0" id="kpi-ingresos">$1.984.000</h5>
+                                <small class="text-muted text-uppercase fs-7">Ingresos Brutos</small>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <form id="formUsuarios" onsubmit="alert('Usuario guardado simulado');">
-                            <input type="number" class="form-control mb-3" placeholder="Identificación" required>
-                            <input type="text" class="form-control mb-3" placeholder="Nombre completo" required>
-                            <input type="email" class="form-control mb-3" placeholder="Correo Usuario" required>
-                            <select class="form-control mb-4" required>
-                                <option value="">Seleccione un Rol</option>
-                                <option value="Administrador">Administrador</option>
-                                <option value="Vendedor">Vendedor</option>
-                                <option value="Cliente">Cliente</option>
-                            </select>
-                            <button type="submit" class="btn btn-maskot w-100">Guardar Usuario</button>
-                        </form>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card p-3 border-0 shadow-sm bg-white rounded-3 d-flex flex-row align-items-center gap-3">
+                            <div class="bg-primary-subtle p-2 rounded-3 text-primary"><i class="fa-solid fa-bag-shopping fs-3"></i></div>
+                            <div>
+                                <h5 class="fw-bold m-0" id="kpi-ordenes">4</h5>
+                                <small class="text-muted text-uppercase fs-7">Ventas Totales</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card p-3 border-0 shadow-sm bg-white rounded-3 d-flex flex-row align-items-center gap-3">
+                            <div class="bg-warning-subtle p-2 rounded-3 text-warning"><i class="fa-solid fa-triangle-exclamation fs-3"></i></div>
+                            <div>
+                                <h5 class="fw-bold m-0 text-danger" id="kpi-alertas">2</h5>
+                                <small class="text-muted text-uppercase fs-7">Stock Crítico</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card p-3 border-0 shadow-sm bg-white rounded-3 d-flex flex-row align-items-center gap-3">
+                            <div class="bg-info-subtle p-2 rounded-3 text-info"><i class="fa-solid fa-crown fs-3"></i></div>
+                            <div>
+                                <h5 class="fw-bold m-0 text-truncate" style="max-width: 130px;">Jeans Street</h5>
+                                <small class="text-muted text-uppercase fs-7">Top Artículo</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="card border-0 shadow-sm p-4 bg-white rounded-3 h-100">
+                            <h5 class="fw-bold mb-3 text-dark fs-6"><i class="fa-solid fa-chart-area me-2 text-primary"></i>Flujo de Ventas Diarias (COP)</h5>
+                            <div style="position: relative; height:280px; width:100%;">
+                                <canvas id="graficoVentasLineas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm p-4 bg-white rounded-3 h-100">
+                            <h5 class="fw-bold mb-3 text-dark fs-6"><i class="fa-solid fa-chart-pie me-2 text-warning"></i>Categorías Más Vendidas</h5>
+                            <div style="position: relative; height:280px; width:100%;" class="d-flex align-items-center justify-content-center">
+                                <canvas id="graficoCategoriasDona"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-usuarios" class="tab-section">
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                    <h3 class="fw-bold m-0 text-dark">Miembros del Sistema</h3>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalUsuario">
+                        <i class="fa-solid fa-user-plus me-2"></i>Nuevo Usuario
+                    </button>
+                </div>
+
+                <div class="card shadow-sm border-0 p-4 bg-white rounded-3">
+                    <div class="table-responsive">
+                        <table id="tablaUsuario" class="table table-striped table-hover align-middle w-100">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Identificación</th>
+                                    <th>Nombre</th>
+                                    <th>Correo Electrónico</th>
+                                    <th>Rol</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-usuarios-cuerpo"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-inventario" class="tab-section">
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                    <h3 class="fw-bold text-dark m-0">Control de Inventario Premium</h3>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalInventario">
+                        <i class="fa-solid fa-plus me-2"></i>Agregar Producto
+                    </button>
+                </div>
+                <div class="card shadow-sm border-0 p-4 bg-white rounded-3">
+                    <div class="table-responsive">
+                        <table id="tablaInventario" class="table table-striped table-hover align-middle w-100 m-0">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Stock Actual</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-inventario-cuerpo"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-ventas" class="tab-section">
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                    <h3 class="fw-bold text-dark m-0">Historial de Ventas</h3>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalVenta">
+                        <i class="fa-solid fa-receipt me-2"></i>Registrar Venta
+                    </button>
+                </div>
+
+                <div class="card shadow-sm border-0 p-4 bg-white rounded-3">
+                    <div class="table-responsive">
+                        <table id="tablaVentas" class="table table-striped table-hover align-middle w-100 m-0">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Factura</th>
+                                    <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>Items</th>
+                                    <th>Vendedor</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-ventas-cuerpo"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </main>
 </div>
+
+<div class="modal fade" id="modalUsuario" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title fw-bold">Crear Nuevo Miembro</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss=\"modal\"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="form-usuario">
+                    <select class="form-select mb-3" required id="select-rol">
+                        <option value="" disabled selected>Seleccione un Rol</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Vendedor">Vendedor</option>
+                        <option value="Cliente">Cliente</option>
+                    </select>
+                    <input type="text" class="form-control mb-3" placeholder="Número de Identificación" required>
+                    <input type="text" class="form-control mb-3" placeholder="Nombre Completo" required>
+                    <input type="email" class="form-control mb-3" placeholder="Correo Electrónico" required>
+                    <input type="password" class="form-control mb-4" placeholder="Contraseña Temporal" required>
+                    <button type="submit" class="btn btn-dark w-100 py-2 fw-bold">Dar de Alta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalInventario" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title fw-bold">Ingresar Producto a Bodega</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss=\"modal\"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="form-inventario">
+                    <input type="text" class="form-control mb-3" placeholder="Nombre de la Prenda / Artículo" required>
+                    <input type="number" class="form-control mb-4" placeholder="Cantidad Inicial (Stock)" min="0" required>
+                    <button type="submit" class="btn btn-dark w-100 py-2 fw-bold">Cargar Stock</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalVenta" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title fw-bold">Registrar Nueva Venta</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss=\"modal\"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="form-venta">
+                    <input type="text" class="form-control mb-3" placeholder="Nombre del Cliente" required>
+                    <input type="text" class="form-control mb-3" placeholder="Items (Ej: 2x Gorra Deluxe, 1x Hoodie)" required>
+                    <input type="text" class="form-control mb-3" placeholder="Vendedor" required>
+                    <input type="number" class="form-control mb-4" placeholder="Valor Total de la Venta (COP)" min="0" required>
+                    <button type="submit" class="btn btn-dark w-100 py-2 fw-bold">Registrar Factura</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.3.4/js/dataTables.bootstrap5.min.js"></script>
-<script src="../dashboard.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
-    
-    document.getElementById("admin-name").innerText = localStorage.getItem("nombre") || "Admin Deluxury";
+    document.addEventListener("DOMContentLoaded", function () {
+        
+        const ctxLineas = document.getElementById('graficoVentasLineas');
+        if (ctxLineas) {
+            new Chart(ctxLineas.getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: ['Lun 22', 'Mar 23', 'Mié 24', 'Jue 25', 'Vie 26', 'Sáb 27'],
+                    datasets: [{
+                        label: 'Ingresos Diarios',
+                        data: [320000, 580000, 1084000, 0, 0, 0],
+                        borderColor: '#212529',
+                        backgroundColor: 'rgba(33, 33, 33, 0.05)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.3,
+                        pointBackgroundColor: '#d4af37',
+                        pointBorderColor: '#212529',
+                        pointRadius: 5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value.toLocaleString('es-CO');
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        
+        const ctxDona = document.getElementById('graficoCategoriasDona');
+        if (ctxDona) {
+            new Chart(ctxDona.getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Jeans / Pantalones', 'Hoodies', 'Accesorios', 'Calzado'],
+                    datasets: [{
+                        data: [450000, 250000, 120000, 0],
+                        backgroundColor: ['#212529', '#495057', '#d4af37', '#dee2e6'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { boxWidth: 12, font: { size: 11, family: 'Lato' } }
+                        }
+                    }
+                }
+            });
+        }
+    });
 </script>
+
+
+<script src="./js/dashboard.js"></script>
+
+</body>
+</html>
 </body>
 </html>
